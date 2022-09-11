@@ -1,0 +1,37 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Drawing app</title>
+</head>
+
+<body>
+    <section class="container">
+        <div id="toolbar">
+            <label for="stroke">Stroke</label>
+            <input id="stroke" name='stroke' type="color">
+            <label for="lineWidth">Line Width</label>
+            <input id="lineWidth" name='lineWidth' type="range" value="10" min="1" max="50">
+            <button id="brush" onclick="toogleActive('brush')" class="active">Brush</button>
+            <button id="eraser" onclick="toogleActive('eraser')">Eraser</button>
+            <button id="textarea" onclick="toogleActive('textarea')">Text Area</button>
+            <br>
+            <button id="clear">Clear All</button>
+            <br>
+            <button id="save" onclick="SaveImage()">
+                <a href="#" id="img-file" download="image.png">Save</a>
+            </button>
+            <button id="load">Load</button>
+        </div>
+        <div class="drawing-board">
+            <canvas id="drawing-board"></canvas>
+        </div>
+    </section>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
